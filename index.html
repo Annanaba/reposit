@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GitHub Repository Search</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #d3d3d3;
+        }
+
+        #app {
+            width: 470px;
+            padding: 20px;
+            background-color: white;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            position: relative;
+        }
+
+        .title {
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+
+        .search-line {
+            position: relative;
+            margin-bottom: 20px;
+        }
+
+        .search-input {
+            width: 100%;
+            padding: 10px;
+            box-sizing: border-box;
+            font-size: 16px;
+        }
+
+        .autocomplete-suggestions {
+            border: 1px solid #ddd;
+            max-height: 150px;
+            overflow-y: auto;
+            background: #fff;
+            width: 100%;
+            z-index: 1000;
+        }
+
+        .autocomplete-suggestion {
+            padding: 10px;
+            cursor: pointer;
+            border-bottom: 1px solid #ddd;
+        }
+
+        .autocomplete-suggestion:hover {
+            background-color: #f0f0f0 ;
+        }
+
+        .repo-wrapper {
+            margin-top: 20px;
+            position: relative;
+            z-index: 500;
+        }
+
+        .repo-list {
+            list-style: none;
+            padding: 0; 
+            margin: 0; 
+        }
+
+        .repo-item {
+            background-color: #ff69b4;
+            color: rgb(0, 0, 0);
+            padding: 10px;
+            margin-bottom: 10px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-radius: 5px;
+        }
+
+        .repo-item button {
+            background: none;
+            border: none;
+            color: rgb(212, 23, 23);
+            font-size: 40px;
+            cursor: pointer;
+        }
+
+        .repo-item button:hover {
+            color: darkred;
+        }
+    </style>
+</head>
+<body>
+    <div id="app"></div>
+    <script src="index.js"></script>
+</body>
+</html>
+
+
